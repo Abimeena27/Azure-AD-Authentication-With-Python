@@ -1,0 +1,517 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopify</title>
+    <!--link rel="stylesheet" href="Index.css"-->
+
+    <style>
+        * { 
+    margin:0%;  
+}
+
+/* Base-color */
+
+.base-color{
+    width:100%;
+    background-color:#0495ce;   
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.logo{
+    padding: 10px;
+    width:20%;
+    height:50px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center;
+    font-size: 15px;
+    color:rgb(197, 235, 233);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+/* Navigation */
+
+.header-links{
+    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+li{
+ padding-right: 20px;
+}
+
+/* List-Contents */
+
+.list-items {
+    color: black;
+    width:100%;
+    height:60px;
+    font-size: 20px;
+    font-family: Candara;
+     display:flex;
+    justify-content:space-between;
+    list-style-type: none;
+    line-height: 50px;
+    float:right;
+    
+}
+
+a{
+    color:rgb(197, 235, 233) ;
+    text-decoration: none;
+}
+
+/* Banner */
+
+.banner{
+
+    width: 100%;
+    height:800px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/058/986/non_2x/online-shopping-store-on-website-and-mobile-phone-design-smart-business-marketing-concept-horizontal-view-illustration-free-vector.jpg');
+    background-size:100% 100% ;
+    transition:remove;
+    transition: 1s;
+    background-attachment: fixed;
+    position: relative;
+    background-color: rgba(16, 65, 100, 0.37);
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+
+
+/* Shop Now! button */
+
+.btn{
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-width: 0px;
+    background-color:#0495ce;
+    margin: auto;
+    
+}
+.btn:hover{
+    background-color: #ff9677;
+}
+
+/* Products */
+
+
+.our-products{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:#0495ce;
+    display: flex;   
+    justify-content: center;
+
+}
+
+.products-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.product-area{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.products{
+    width:60%;
+    background-color:whitesmoke;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 30px 0px 30px 0px;
+   
+}
+
+.product-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    cursor:crosshair;
+}
+
+.product-img>img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.product-img>img:hover {
+    transform: scale(1.3);
+}
+
+.product-detail{
+    width: 100%;
+    height:250px;
+    padding:10px;    
+}
+
+.product-detail>h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.product-detail>h2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:bold;
+    line-height: 50px;
+    font-size:18px;
+}
+
+.product-detail>p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 25px;
+}
+
+/* About Us */
+
+.about-us{
+    width:100%;
+    height:auto;
+    background-color:#72bce491;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-container{
+    width:100%;    
+    background-color:rgba(102, 192, 217, 0.135);
+    border-radius: 30px 0px 30px 0px;
+    margin: 50px;
+    padding:10px;
+    
+}
+
+
+.about-container>p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:20px;
+    line-height: 30px;
+    font-weight: 500;
+    display: flex;
+    
+}
+
+.about-pic{
+    border-radius: 30px 0px 30px 0px;
+    margin: 20px;
+}
+
+/* Footer */
+
+.footer{
+    width:100%;
+    height: auto;
+    color: rgb(197, 235, 233);
+    background-color:#0495ce;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px;
+}
+
+.social-media{
+    margin:20px;
+    display: flex;
+}
+
+.Social-media-links{
+    line-height: 50px;
+    list-style-type:none;
+}
+
+/* For Mobiles */
+
+@media (max-width:450px) {
+
+    .base-color{
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        width:100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }    
+
+    
+    
+    .header-links{
+        width:100%;
+
+    }
+
+   
+    .list-items{
+        width:100%;
+        height:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column ;
+        font-size: 20px;
+        box-shadow: 0 0 1px gray;
+    }
+
+    .banner{
+        width: auto;
+        height: 380px;
+        
+        background-image: url('https://media.istockphoto.com/vectors/smartphone-online-shopping-concepts-vector-id1213907347?b=1&k=20&m=1213907347&s=170667a&w=0&h=SrZH17yrACI7IPcUjlnT_hxSRGX5CSoN9FxY-Wm00jM=');
+    }
+
+    .banner-details{
+        width: 100%;
+        margin: 0%;
+        color: white;
+        font-weight: 300;
+    }
+
+    .banner-details>h1{
+        color: white;
+    }
+
+
+    .our-products{
+        width:100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .products-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }    
+
+   
+
+
+   .about-us{
+       width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+    
+   }
+
+   .about-pic{
+       display: flex;
+       flex-direction: column;
+       width:90%;
+       height:400px;
+       
+   }
+
+   .footer {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .Social-media-links {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+
+   }   
+
+    </style>
+
+ 
+  <link rel = "icon"href= "https://sricharan7113.github.io/Shopify/Logo.png" type="icon">
+
+
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="base-color">
+            <div class="logo">
+                <h1>Shopify</h1> 
+                <img src="https://sricharan7113.github.io/Shopify/Logo.png" alt="icon" width="60vw" srcset="">
+            </div>
+            
+                <div class="header-links">
+                        <ul  class ="list-items">
+                          <li>  <a href="#banner"> Home </a></li>           
+                           <li> <a href="#our-products"> Products </a></li>  
+                           <li> <a href="#about-us">About us </a></li>  
+                          <li> <a href="#footer"> Contact </a> </li> 
+                          <li class="cart"> <img src = "https://sricharan7113.github.io/Shopify/Cart.png" width="40px"></li> 
+                            </ul>                
+                </div>
+        </div>
+    </header>
+
+    <!-- Banner  -->
+
+    <section class="banner" id="banner">
+            
+    </section>
+
+
+
+    <!-- Products -->
+    <!-- Product 1 -->
+
+    
+ <section class="our-products" id="our-products">
+    
+        <div class="products-container">
+            <div class="product-area">
+                <div class="products">
+                    <div class="product-img">
+                        <img src="https://sricharan7113.github.io/Shopify/Product%201.jpg" />
+                    </div>
+                    <div class="product-detail">
+                            <h1>T-Shirt For Women</h1>
+                            <h2>₹400</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            <button class="btn">Add To Cart</button>
+                    </div>
+                 </div>
+                </div>
+                 </div>
+    
+    <!-- Product 2 -->
+
+
+        <div class="products-container">
+            <div class="product-area">
+                <div class="products">
+                    <div class="product-img">
+                        <img src="https://sricharan7113.github.io/Shopify/Product%201.jpg" />
+                    </div>
+                    <div class="product-detail">
+                            <h1>T-Shirt For Men</h1>
+                            <h2>₹400</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <button class="btn">Add To Cart</button>
+                    </div>
+                 </div>
+                </div>
+                 </div>
+    
+    <!-- Product 3 -->
+      
+        <div class="products-container">
+            <div class="product-area">
+                <div class="products">
+                    <div class="product-img">
+                        <img src="https://sricharan7113.github.io/Shopify/Product%203.jpg" />
+                    </div>
+                    <div class="product-detail">
+                            <h1>Couple T-Shirt </h1>
+                            <h2>₹600</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            <button class="btn">Add To Cart</button>
+                    </div>
+                 </div>
+                </div>
+                 </div>
+
+    <!-- product 4 -->
+
+    <div class="products-container">
+        <div class="product-area">
+            <div class="products">
+                <div class="product-img">
+                    <img src="https://sricharan7113.github.io/Shopify/Product%204.jpg" />
+                </div>
+                <div class="product-detail">
+                        <h1>T-Shirt For Men</h1>
+                        <h2>₹400</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                        <button class="btn">Add To Cart</button>
+                </div>
+             </div>
+            </div>
+             </div>
+ </section>
+             
+    <!-- About Us -->
+
+   <div class="about-us" id="about-us">
+       <div class="about-container">
+           <h1>About Us!</h1>
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+               Esse iste quae cupiditate corporis, odit aliquid suscipit dolores ratione facilis quis, non eum eveniet sapiente.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+               Esse iste quae cupiditate corporis, odit aliquid suscipit dolores ratione facilis quis, non eum eveniet sapiente.
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+               Esse iste quae cupiditate corporis, odit aliquid suscipit dolores ratione facilis quis, non eum eveniet sapiente. 
+               </p>
+       </div>
+       <div class="about-pic">
+           <img src = "https://sricharan7113.github.io/Shopify/About%20us.jpg"/>
+       </div>     
+   </div>
+
+<!-- Footer -->
+
+ <footer class="footer" id="footer">
+     <div class="contact">
+         <p>
+             Phone:1234567890 </br>
+             Mail:customerservices@Shopify.com</br></br>
+             Address: Lorem ipsum dolor, </br>
+             sit amet consectetur adipisicing elit.</br>
+             Quasi, eaque quis. Quibusdam</br>
+        </p>
+     </div>
+     <div class="social-media">
+         <ul class="Social-media-links">
+             <li> <a href="https://www.instagram.com/" target="_blank" > <img src="https://sricharan7113.github.io/Shopify/Instagram.png" width="30px">  </a> </li> 
+             <li> <a href="https://www.facebook.com/" target="_blank" > <img src="https://sricharan7113.github.io/Shopify/Facebook.png" width="30px">  </a> </li>
+             <li> <a href="https://www.twitter.com/" target="_blank" > <img src="https://sricharan7113.github.io/Shopify/Twitter.png" width="30px">  </a> </li>  
+             <li> <a href="https://www.linkedin.com/" target="_blank" > <img src="https://sricharan7113.github.io/Shopify/Linkedin.png" width="30px">  </a> </li>
+         </ul>
+     </div>
+ </footer>
+
+    </body>
+
+</html>
